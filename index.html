@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div.componente-audio {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        height: 24px;
+        padding: 2px;
+
+        border-top: white !important;
+        border: solid thin rgb(88, 131, 250);
+        border-radius: 5px;
+        margin: 5px;
+      }
+      div.componente-audio input {
+        border: none;
+        border-bottom: grey solid thin;
+        margin: 5px;
+      }
+      div.componente-audio .label-audio {
+        position: absolute;
+        font-size: 10px;
+        font-family: monospace;
+        top: -5px;
+        margin-left: 5px;
+      }
+      div.componente-audio .gravacao {
+        height: 100%;
+      }
+      div.componente-audio button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    </style>
+    <script src="https://www.webrtc-experiment.com/common.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="AudioComponent.js"></script>
+  </head>
+  <body>
+    <div id="audios"></div>
+    <script>
+      var i = 0;
+      for (let index = 1; index < 10; index++)
+        createComponentOn("audios", "audio" + index, "Audio " + index + ":");
+    </script>
+  </body>
+</html>
